@@ -1,6 +1,4 @@
 [[redirects]]
-  from = "/netlify/*"
-  to = "https://www.google.com/search?q=:splat"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+  from = "/netlify/:anything"
+  to = "https://www.google.com/search?q=:anything"
+  status = 301
