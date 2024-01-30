@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="index.css" rel="stylesheet" />
     <script defer src="index.js"></script>
     <title>Document</title>
   </head>
@@ -13,50 +14,154 @@
         Briefly explain one challenge you experienced in setting up this site
         and how you overcame it.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>
+          Response: I made my site with Vanilla javaScript. Given the requirements
+          of the task it is more efficient to go with a lightweight option. I
+          did not encounter any challenges in setting up this site. Since I have
+          a background in Software Engineering and a good understanding of git
+          and github that step was pretty straightforward. Also, Netlify's one
+          click deploy process makes everything extremely easy from that
+          perspective.
+        </li>
       </ul>
       <li>
         What did you think of our service during the time you used it? Provide
         some constructive criticism or some features that impressed you.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>
+          Response: As mentioned above, the one click deploy and the speed at
+          which everything is available is impressive to me. The navigation is
+          intuitive and I appreciate that there are links to documentation for
+          each section of the dashboard that I visit.
+        </li>
+        <li>
+          <p>
+            I encountered a challenge while integrating a custom domain into my
+            website. I chose to experiment with configuring DNS records through
+            GoDaddy, opting out of Netlify's DNS.
+          </p>
+
+          <p>
+            It is suggested that I set the www.customdomain.com as the primary
+            domain in order to benefit from the full advantages of a CDN. I
+            attempted to set the www subdomain as the primary while the status
+            was "Awaiting External DNS." Following the steps, Options (dropdown) &#8594 "Set as
+            primary domain" &#8594 a confirmation modal appears &#8594 "Set as primary
+            domain".
+          </p>
+
+          <p>
+            However, after confirming, the modal updated with a warning: "We're
+            provisioning a certificate for your site, and you cannot change
+            custom domains until that process completes." Subsequent clicks on
+            'Set as primary domain' within the modal had no effect.
+          </p>
+
+          <p>
+            Interpreting the warning, it seemed that a background process was in
+            progress to facilitate my transaction. Despite waiting for some
+            time, I received no additional information. To investigate further,
+            I opened DevTools, examined the network tab, and discovered a 422
+            code along with the error/warning message present in the modal.
+          </p>
+
+          <p>
+            Believing that resolving the "Awaiting External DNS" status was
+            necessary, I followed the steps to clear it. Once the DNS records
+            were successfully recognized by Netlify, I could then set the
+            subdomain as my primary domain without any issues. Notably, this
+            occurred on the Chrome browser.
+          </p>
+
+          <p>
+            A suggested fix to this issue would be to disable the 'Set as
+            primary domain' button while the 'Awaiting External DNS' status is
+            present. Additionally, providing a clear indication to the user that
+            external records must be set before attempting to set the www
+            subdomain as the primary would enhance the user experience. 
+          </p>
+        </li>
       </ul>
       <li>
         Rank your 5 favorite and 5 least favorite activities from this list:
         https://gist.github.com/laurajodz/592402a6336410377dee1a744af846ab
       </li>
-      <ul>
+      <ul class="response">
         <li>Answer:</li>
+        <li>5 favorite</li>
+        <ol>
+          <li>
+            Create video tutorials to help teach users a specific feature or use
+            case
+          </li>
+          <li>Help train and onboard new support teammates</li>
+          <li>
+            Suggest and champion improvements to the Support team's workflow
+          </li>
+          <li>Manage a Support team</li>
+          <li>Submit bug reports and potentially bug fixes</li>
+        </ol>
+        <li>5 least favorite</li>
+        <ol>
+          <li>Respond to Netlify customers on Twitter</li>
+          <li>
+            Work with prospective customers to explain our service and the
+            pricing model
+          </li>
+          <li>
+            Work with a customer to figure out if Netlify's service can solve a
+            particular workflow or integration challenge they have
+          </li>
+          <li>Help manage communications during a service outage</li>
+          <li>Set up your own copy of several site frameworks for debugging</li>
+        </ol>
       </ul>
       <li>
         Provide a link to documentation for a technical/developer-focused
         product, which you think are well done, and explain why you think they
         are well done.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>
+          Response:
+          <a
+            href="https://developer.android.com/kotlin/first"
+            target="_blank"
+            rel="noreferrer noopener"
+            >developer.android.com</a
+          >
+          <p>
+            This documentation is well done because it has easy and logical navigation, very thorough documentation,
+            and content rich. There are also step by step guides where you can get hands on experience and links to great
+            resources. There is also a search feature if you are looking for something specific.
+          </p>
+          <p>You can also view the documentation in a different language. Documentation with features that allow users to report bugs or mark a content as useful/helpful or not is also a plus, which this documentation has available.</p>
+          <p>
+
+          </p>
+        </li>
       </ul>
       <li>
         Explain, in a couple of paragraphs, what you think are two major
         challenges around DNS configuration for less-technical customers hosting
         websites.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>Response:<p></p><p></p></li>
       </ul>
       <li>
-        A customer writes in to Support saying simply that their “site won’t
+        A customer writes in to Support saying simply that their “site won't
         build”. You have access to their build logs, and there you see this
         error: Build failed due to a user error: Build script returned non-zero
-        exit code: 2. You have no more information than this and the site’s
+        exit code: 2. You have no more information than this and the site's
         source repository is private so you cannot test the build yourself. How
         would you troubleshoot this issue? What steps would you take? Also,
         please compose your best customer-facing first response.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>Response:</li>
       </ul>
       <li>
         How would you set up an http 301 status redirect from
@@ -65,8 +170,8 @@
         formatting here. Now, how about a proxy redirect? Please add that proxy
         redirect rule directly to your site.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>Response:</li>
       </ul>
       <li>
         Please attempt to deploy a function on our service. This need not be
@@ -75,8 +180,8 @@
         describe what you experienced and how you attempted to troubleshoot any
         issues you encountered.
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>Response:</li>
       </ul>
       <li>
         We understand you don't know anything about our internal procedures at
@@ -90,8 +195,8 @@
         correct and the problem is very large and impactful. How might you
         escalate?
       </li>
-      <ul>
-        <li>Answer:</li>
+      <ul class="response">
+        <li>Response:</li>
       </ul>
     </ul>
   </body>
