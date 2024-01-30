@@ -8,149 +8,153 @@
     <title>Document</title>
   </head>
   <body>
-    <ul>
-      <li>
-        Talk about how you made your site and why you chose the tools you did.
-        Briefly explain one challenge you experienced in setting up this site
-        and how you overcame it.
-      </li>
-      <ul class="response">
-        <li>
-          Response: I made my site with vanilla javaScript. Given the requirements
-          of the task I wanted to go with a lightweight option.
-        </li>
-        <li>
-          <p>
-            I encountered a minor challenge while adding a custom domain to my
-            website. I chose to experiment with configuring DNS records through
-            GoDaddy, opting out of Netlify's DNS.
-          </p>
-          <p>
-            It is suggested that I set the www.customdomain.com as the primary
-            domain in order to benefit from the full advantages of a CDN. I
-            attempted to set the www subdomain as the primary while the status
-            was "Awaiting External DNS." Following the steps, Options (dropdown) &#8594 "Set as
-            primary domain" &#8594 a confirmation modal appears &#8594 "Set as primary
-            domain".
-          </p>
-          <p>
-            However, after confirming, the modal updated with a warning: "We're
-            provisioning a certificate for your site, and you cannot change
-            custom domains until that process completes." Subsequent clicks on
-            'Set as primary domain' within the modal had no effect.
-          </p>
-          <p>
-            Interpreting the warning, it seemed that a background process was in
-            progress to facilitate my transaction. Despite waiting for some
-            time, I received no additional information. To investigate further,
-            I opened DevTools, examined the network tab, and when I analyzed the response I discovered a 422 status
-            code along with the error/warning message present in the modal.
-            <code>
-                <pre>
-                    {
-                        "code": 422,
-                        "message": "We're provisioning a certificate for your site, you cannot change custom domains until that process completes"
-                    }
-                </pre>
-            </code>
-          </p>
-          <p>
-            Believing that resolving the "Awaiting External DNS" status was
-            necessary, I followed the steps to clear it. Once the DNS records
-            were successfully recognized by Netlify, I could then set the
-            subdomain as my primary domain without any issues. Notably, this
-            occurred on the Chrome browser.
-          </p>
-          <p>
-            Possible Solution:
-            <ul>
+    <div class="wrapper">
+        <ul class="card">
+            <li>
+                Talk about how you made your site and why you chose the tools you did.
+                Briefly explain one challenge you experienced in setting up this site
+                and how you overcame it.
+            </li>
+            <ul class="response">
                 <li>
-                    Disable the 'Set as primary domain' button while the 'Awaiting External DNS' status is present.
+                    I made my site with vanilla javaScript. Given the requirements
+                    of the task I wanted to go with a lightweight option.
                 </li>
                 <li>
-                    Add additional information indicating that the DNS records must be set before attempting to set the www subdomain. 
+                    <p>
+                        I encountered a minor challenge while adding a custom domain to my
+                        website. I chose to experiment with configuring DNS records through
+                        GoDaddy, opting out of Netlify's DNS.
+                    </p>
+                    <p>
+                        It is suggested that I set the www.customdomain.com as the primary
+                        domain in order to benefit from the full advantages of a CDN. I
+                        attempted to set the www subdomain as the primary while the status
+                        was "Awaiting External DNS." Following the steps, Options (dropdown) &#8594 "Set as
+                        primary domain" &#8594 a confirmation modal appears &#8594 "Set as primary
+                        domain".
+                    </p>
+                    <p>
+                        However, after confirming, the modal updated with a warning: "We're
+                        provisioning a certificate for your site, and you cannot change
+                        custom domains until that process completes." Subsequent clicks on
+                        'Set as primary domain' within the modal had no effect.
+                    </p>
+                    <p>
+                        Interpreting the warning, it seemed that a background process was in
+                        progress to facilitate my transaction. Despite waiting for some
+                        time, I received no additional information. To investigate further,
+                        I opened DevTools, examined the network tab, and when I analyzed the response I discovered a 422 status
+                        code along with the error/warning message present in the modal.
+                        <code>
+                            <pre>
+                                {
+                                    "code": 422,
+                                    "message": "We're provisioning a certificate for your site, you cannot change custom domains until that process completes"
+                                }
+                            </pre>
+                        </code>
+                    </p>
+                    <p>
+                        Believing that resolving the "Awaiting External DNS" status was
+                        necessary, I followed the steps to clear it. Once the DNS records
+                        were successfully recognized by Netlify, I could then set the
+                        subdomain as my primary domain without any issues. Notably, this
+                        occurred on the Chrome browser.
+                    </p>
+                    <p>
+                        Possible Solution:
+                        <ul>
+                            <li>
+                                Disable the 'Set as primary domain' button while the 'Awaiting External DNS' status is present.
+                            </li>
+                            <li>
+                                Add additional information indicating that the DNS records must be set before attempting to set the www subdomain. 
+                            </li>
+                        </ul>
+                    </p>
                 </li>
             </ul>
-          </p>
-        </li>
-      </ul>
-      <li>
-        What did you think of our service during the time you used it? Provide
-        some constructive criticism or some features that impressed you.
-      </li>
-      <ul class="response">
-        <li>
-          Response: I appreciate the straightforward deployment process, including the option to deploy from my GitHub repository with a quick resolution time. The dashboard navigation is user-friendly, and the inclusion of links to relevant documentation in each section is helpful for understanding configuration options.
-        </li>
-      </ul>
-      <li>
-        Rank your 5 favorite and 5 least favorite activities from this list:
-        https://gist.github.com/laurajodz/592402a6336410377dee1a744af846ab
-      </li>
-      <ul class="response">
-        <li>Answer:</li>
-        <li>5 favorite</li>
-        <ol>
-          <li>
-            Create video tutorials to help teach users a specific feature or use
-            case
-          </li>
-          <li>Help train and onboard new support teammates</li>
-          <li>
-            Suggest and champion improvements to the Support team's workflow
-          </li>
-          <li>Manage a Support team</li>
-          <li>Submit bug reports and potentially bug fixes</li>
-        </ol>
-        <li>5 least favorite</li>
-        <ol>
-          <li>Respond to Netlify customers on Twitter</li>
-          <li>
-            Work with prospective customers to explain our service and the
-            pricing model
-          </li>
-          <li>
-            Work with a customer to figure out if Netlify's service can solve a
-            particular workflow or integration challenge they have
-          </li>
-          <li>Help manage communications during a service outage</li>
-          <li>Set up your own copy of several site frameworks for debugging</li>
-        </ol>
-      </ul>
-      <li>
-        Provide a link to documentation for a technical/developer-focused
-        product, which you think are well done, and explain why you think they
-        are well done.
-      </li>
-      <ul class="response">
-        <li>
-          Response:
-          <a
-            href="https://nextjs.org/docs"
-            target="_blank"
-            rel="noreferrer noopener"
-            >https://nextjs.org/docs
-            </a>
-          <p>
-            This documentation is well-designed with clear navigation, comprehensive content, images, and a practical search function. It includes a helpful learn section for hands-on experience and links to valuable external resources within the documentation. User feedback options, like content rating and feedback submission, contribute to its usability and collaborative nature.
-          </p>
-        </li>
-      </ul>
-      <li>
-        Explain, in a couple of paragraphs, what you think are two major
-        challenges around DNS configuration for less-technical customers hosting
-        websites.
-      </li>
-      <ul class="response">
-        <li>Response:
-            <p>
-                One primary challenge revolves around the comprehension of A (Address) and CNAME (Canonical Name) records. The A record serves the function of mapping a domain name to the IPv4 address of the web server hosting the website. While the CNAME records resolve alias names to their true or canonical domain names. Sifting through the documentation of the registrar to understand how to update the DNS records might also be an issue. Misconfiguration can bring down a website which could cause frustration.
-            </p>
-            <p>
-                Another significant challenge pertains to understanding Time to live (TTL) and its impact on DNS propagation. The TTL parameter dictates the duration for which DNS information is considered valid. Notably, some hosting providers implement prolonged TTLs, resulting in delays of several hours or even days for DNS updates to propagate. This may lead to customer frustration or a misconception of potential misconfigurations when anticipated updates are not promptly reflected.
-            </p>
-        </li>
-      </ul>
+        </ul>
+        <ul class="card">
+            <li>
+                What did you think of our service during the time you used it? Provide
+                some constructive criticism or some features that impressed you.
+            </li>
+            <ul class="response">
+                <li>
+                    I appreciate the straightforward deployment process, including the option to deploy from my GitHub repository with a quick resolution time. The dashboard navigation is user-friendly, and the inclusion of links to relevant documentation in each section is helpful for understanding configuration options.
+                </li>
+            </ul>
+        </ul>
+        <ul class="card">
+            <li>
+                Rank your 5 favorite and 5 least favorite activities from this list:
+                https://gist.github.com/laurajodz/592402a6336410377dee1a744af846ab
+            </li>
+            <ul class="response">
+                <li>5 favorite</li>
+                <ol>
+                    <li>
+                        Create video tutorials to help teach users a specific feature or use
+                        case
+                    </li>
+                    <li>Help train and onboard new support teammates</li>
+                    <li>
+                        Suggest and champion improvements to the Support team's workflow
+                    </li>
+                    <li>Manage a Support team</li>
+                    <li>Submit bug reports and potentially bug fixes</li>
+                </ol>
+                <li>5 least favorite</li>
+                <ol>
+                    <li>Respond to Netlify customers on Twitter</li>
+                    <li>
+                        Work with prospective customers to explain our service and the
+                        pricing model
+                    </li>
+                    <li>
+                        Work with a customer to figure out if Netlify's service can solve a
+                        particular workflow or integration challenge they have
+                    </li>
+                    <li>Help manage communications during a service outage</li>
+                    <li>Set up your own copy of several site frameworks for debugging</li>
+                </ol>
+            </ul>
+        </ul>
+        <ul class="card">
+                <li>
+                    Provide a link to documentation for a technical/developer-focused
+                    product, which you think are well done, and explain why you think they
+                    are well done.
+                </li>
+            <ul class="response">
+                <li>
+                    <a href="https://nextjs.org/docs" target="_blank" rel="noreferrer noopener">https://nextjs.org/docs</a>
+                    <p>
+                        This documentation is well-designed with clear navigation, comprehensive content, images, and a practical search function. It includes a helpful learn section for hands-on experience and links to valuable external resources within the documentation. User feedback options, like content rating and feedback submission, contribute to its usability and collaborative nature.
+                    </p>
+                </li>
+            </ul>
+        </ul>
+        <ul class="card">
+            <li>
+                    Explain, in a couple of paragraphs, what you think are two major
+                    challenges around DNS configuration for less-technical customers hosting
+                    websites.
+            </li>
+            <ul class="response">
+                <li>
+                    <p>
+                        One primary challenge revolves around the comprehension of A (Address) and CNAME (Canonical Name) records. The A record serves the function of mapping a domain name to the IPv4 address of the web server hosting the website. While the CNAME records resolve alias names to their true or canonical domain names. Sifting through the documentation of the registrar to understand how to update the DNS records might also be an issue. Misconfiguration can bring down a website which could cause frustration.
+                    </p>
+                    <p>
+                        Another significant challenge pertains to understanding Time to live (TTL) and its impact on DNS propagation. The TTL parameter dictates the duration for which DNS information is considered valid. Notably, some hosting providers implement prolonged TTLs, resulting in delays of several hours or even days for DNS updates to propagate. This may lead to customer frustration or a misconception of potential misconfigurations when anticipated updates are not promptly reflected.
+                    </p>
+                </li>
+            </ul>
+        </ul>
+    <ul class="card">
       <li>
         A customer writes in to Support saying simply that their “site won't
         build”. You have access to their build logs, and there you see this
@@ -161,7 +165,7 @@
         please compose your best customer-facing first response.
       </li>
       <ul class="response">
-        <li>Response:
+        <li>
             <p>
                 I would take the following steps to troubleshoot the issue:
                 <ul>
@@ -187,16 +191,20 @@
             </p>
             <p>
                 Customer response: I am sorry to hear that you are having trouble deploying your site because the site won't build. I have investigated the issue and have found some resources that might help you troubleshoot the issue. If you encounter any difficulties or have specific questions while going through these materials, please don't hesitate to reach out. I'm here to help.
+            </p>    
                 <ul>
                     <li>Netlify's Documentation: <a href="https://docs.netlify.com/configure-builds/troubleshooting-tips/" target="_blank">docs.netlify.com/configure-builds/troubleshooting-tips/</a></li>
                     <li>Netlify's Support Forms: <a href="https://answers.netlify.com/t/build-failed-due-to-a-user-error-build-script-returned-non-zero-exit-code-2/40561" target="_blank">https://answers.netlify.com/t/build-failed-due-to-a-user-error-build-script-returned-non-zero-exit-code-2/40561</a></li>
                     <li>Netlify's Support Forms: <a href="https://answers.netlify.com/t/building-script-returned-non-zero-exit-code-2/49827" target="_blank">https://answers.netlify.com/t/building-script-returned-non-zero-exit-code-2/49827</a></li>
                     <li>React.js Related: <a href="https://stackoverflow.com/questions/64468843/netlify-deployment-failed-during-stage-building-site-build-script-returned-n" target="_blank" rel="noreferrer noopener">https://stackoverflow.com/questions/64468843/netlify-deployment-failed-during-stage-building-site-build-script-returned-n</a></li>
                 </ul>
+            <p>
                 If you can provide additional information regarding any steps you have taken to resolve the issue, your setup, or build/error logs I would be more than happy to assist you in tracking down the culprit. Getting you unstuck is our top priority, so, if after reviewing the provided resources and trying any relevant troubleshooting steps, the issue persists, please get back to us with any additional information you can provide so that we can work together to resolve this matter.
             </p>
         </li>
       </ul>
+    </ul>
+    <ul class="card">
       <li>
         How would you set up an http 301 status redirect from
         “/netlify/anything” on your site, to
@@ -214,6 +222,8 @@
             </pre>
         </li>
       </ul>
+    </ul>
+    <ul class="card">
       <li>
         Please attempt to deploy a function on our service. This need not be
         complicated. It could be "Hello World". Note that failure to deploy is
@@ -222,12 +232,14 @@
         issues you encountered.
       </li>
       <ul class="response">
-        <li>Response: I set up my function to respond to <a href="https://www.dreamcloudjourney.com/hello" target="_blank">https://www.dreamcloudjourney.com/hello</a>
+        <li>I set up my function to respond to <a href="https://www.dreamcloudjourney.com/hello" target="_blank">https://www.dreamcloudjourney.com/hello</a>
             <p>I did not encounter any issues with deploying the function. The documentation provided a clear template for how to setup a simple function. The experience was seamless. </p>
             <div><button id="fetchFunction">Fetch Serverless data</button></div>
             <div id="btnResponse"></div>
         </li>
       </ul>
+    </ul>
+    <ul class="card">
       <li>
         We understand you don't know anything about our internal procedures at
         this stage, but we want you to explain at a high level how you'd react
@@ -241,7 +253,7 @@
         escalate?
       </li>
       <ul class="response">
-        <li>Response:
+        <li>
             <p>
                 Since I can't immediately confirm the report, I would take the following steps.
                 <ul>
@@ -256,5 +268,6 @@
         </li>
       </ul>
     </ul>
+    </div>
   </body>
 </html>
