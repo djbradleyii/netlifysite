@@ -1,5 +1,5 @@
 export default async (req, context) => {
-  return new Response(`Hello, World!`);
+  return new Response({ message: "Hello, World!" });
 };
 
 export const config = {
