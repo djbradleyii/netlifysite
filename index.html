@@ -170,6 +170,14 @@
         formatting here. Now, how about a proxy redirect? Please add that proxy
         redirect rule directly to your site.
       </li>
+      <li>
+        <pre>
+            [[redirects]]
+              from = "/netlify/:anything"
+              to = "https://www.google.com/search?q=:anything"
+              status = 301
+        </pre>
+    </li>
       <ul class="response">
         <li>Response:</li>
       </ul>
