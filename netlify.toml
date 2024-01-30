@@ -1,3 +1,5 @@
 [[redirects]]
-  from = "/netlify/anything"
-  to = "https://www.google.com/search?q=anything"
+  from = "/netlify/*"
+  to = "https://www.google.com/search?q=:splat"
+  status = 301
+  force = true
