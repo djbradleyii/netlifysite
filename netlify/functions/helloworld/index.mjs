@@ -1,7 +1,9 @@
 export default async (req, context) => {
+  console.log("req: ", req);
+  console.log("context: ", context);
   return new Response(`Hello, World!`);
 };
 
 export const config = {
-  path: "/netlify/hello",
+  path: "/hello",
 };
