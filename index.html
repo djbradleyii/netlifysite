@@ -38,15 +38,9 @@
                         However, after confirming, the modal updated with a warning: "We're
                         provisioning a certificate for your site, and you cannot change
                         custom domains until that process completes." Subsequent clicks on
-                        'Set as primary domain' within the modal had no effect.
+                        'Set as primary domain' within the modal had no effect. To investigate further, I opened DevTools, examined the network tab, and when I analyzed the response, I discovered a 422 status code along with the error/warning message present in the modal.
                     </p>
                     <p>
-                        
-                        Deciphering the warning, it seemed that a background process was in
-                        progress to facilitate my transaction. Despite waiting for some
-                        time, I received no additional information. To investigate further,
-                        I opened DevTools, examined the network tab, and when I analyzed the response, I discovered a 422 status
-                        code along with the error/warning message present in the modal.
                         <code>
                             <pre>
                                 {
